@@ -7,23 +7,20 @@ class convert
 {
 	public:
 	float x;
-	void inch(float);
-	//	void feet(float);
+	// defining methods
+	// this method converts feets into inches
+	void inch(float a)
+	{
+		cout << a <<" feets = "<< (a*12) << " inches"<< endl;
+	}
+	/*
+	// this method converts inches into feets
+	void feet(float b)
+	{
+		cout << b <<" inches = "<< (b/12) << " feets"<< endl;
+	}
+	*/
 };
-
-// defining methods
-// this method converts feets into inches
-void convert :: inch(float a)
-{
-	cout << a <<" feets = "<< (a*12) << " inches"<< endl;
-}
-/*
-// this method converts inches into feets
-void convert :: feet(float b)
-{
-	cout << b <<" inches = "<< (b/12) << " feets"<< endl;
-}
-*/
 
 int main()
 {
