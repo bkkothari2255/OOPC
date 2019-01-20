@@ -1,0 +1,48 @@
+/* A program to use scope resolution operator ( :: ) using class */
+#include<iostream>  
+using namespace std; 
+
+// defining student_data class
+class student_data
+{ 
+  //declaring data members
+   char fname[20],lname[20];
+   int rollno;
+   int std;
+   char div;
+   public:  
+ //declaring methods
+   void fetch();
+   void display(); 
+}; 
+
+//defining methods outside the class by using scope resolution operator ( :: )   
+void student_data :: fetch() //this method fetch student data
+{ 
+   cout << "Enter First Name : ";
+   cin >> fname;
+   cout << endl << "Enter Last Name : ";
+   cin >> lname;
+   cout << endl << "Enter Roll No. : ";
+   cin >> rollno;
+   cout << endl << "Enter Standard [1-12] : ";
+   cin >> std;
+   cout << endl << "Enter Division [A-G] : ";
+   cin >> div; 
+} 
+void student_data :: display() //this method display fetched data
+{ 
+   cout << endl << "Submited information is as follow" << endl <<"Name: " << fname << " "<< lname;
+   cout << endl <<"Roll No.: " << rollno;
+   cout << endl <<"Standard: " << std;
+   cout << endl <<"Division: " << div; 
+} 
+
+int main() 
+{ 
+   student_data s1; // declaring object s1
+   // accessing fetch and display method
+   s1.fetch();
+   s1.display(); 
+   return 0; 
+}
