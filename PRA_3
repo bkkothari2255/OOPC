@@ -1,0 +1,18 @@
+/* A program to use of scope resolution operator ( :: ) without using class */
+#include <iostream>
+using namespace std; 
+   
+int x; // declaring global variable
+   
+int main() 
+{ 
+  int x; // declaring local variable
+  cout << "Note: Enter different values in both" << endl << endl ;
+  cout << "Enter Global Variable value : ";
+  cin >> ::x; // scope resoltion operator is used to access global variable/function
+  cout << endl << "Enter Local Variable Value : ";
+  cin >> x;
+  cout << endl << "Value of X ( Globally ) : "<< ::x << endl;
+  cout << "Value of X (Locally) : " << x << endl; 
+  return 0; 
+}
