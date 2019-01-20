@@ -1,0 +1,34 @@
+/* A program to demonstrate a use of class. */
+
+#include<iostream> // including library files 
+using namespace std; // Using name space standard to use function like cin , cout ,endl etc.
+
+// A Class is a user defined data-type which has data members and member functions
+class hello
+{
+   char u[20];
+   //declaring methods
+	 public: // it can be private or protected
+   void get();
+	 void welcome();
+};
+
+// defining method to access data members
+void hello :: get()
+{
+ cout << "Type Your Name: ";
+ cin >> u ;
+}
+void hello :: welcome()
+{
+	cout << endl << "Hello ! "<< u << " ... Welcome to C++ environment";
+ }
+ 
+ // main function with retrurn type int
+ int main()
+ {
+ 	hello g; // declaring the object g
+ 	g.get();	// accesing get method
+ 	g.welcome(); // accecing welcome method
+ 	return 0;
+ }
