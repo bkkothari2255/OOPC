@@ -1,10 +1,10 @@
 /* A program to use of scope resolution operator ( :: ) without using class */
 #include <iostream>
-using namespace std; 
-   
+using namespace std;
+
 int x; // declaring global variable
-   
-int main() 
+
+int main()
 { 
   int x; // declaring local variable
   cout << "Note: Enter different values in both" << endl << endl ;
