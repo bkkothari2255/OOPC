@@ -7,22 +7,18 @@ using namespace std; // Using name space standard to use function like cin , cou
 class hello
 {
    char u[20];
-   //declaring methods
-	 public: // it can be private or protected
-   void get();
-	 void welcome();
-};
-
-// defining method to access data members
-void hello :: get()
-{
- cout << "Type Your Name: ";
- cin >> u ;
-}
-void hello :: welcome()
-{
+   //declaring methods and defining method to access data members
+   public: // it can be private or protected
+   void get()
+   {
+	 cout << "Type Your Name: ";
+	 cin >> u ;
+   }
+   void welcome()
+   {
 	cout << endl << "Hello ! "<< u << " ... Welcome to C++ environment";
- }
+   }
+};
  
  // main function with retrurn type int
  int main()
