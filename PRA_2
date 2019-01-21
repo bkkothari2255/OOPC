@@ -1,38 +1,37 @@
 /* A program to convert feet into inches using class. */
-#include<iostream>
-using namespace std;
-
-// defining convert class
-class convert
+#include<iostream.h>
+#include<conio.h>
+class A
 {
+	int feet;
+
 	public:
-	float x;
-	// defining methods
-	// this method converts feets into inches
-	void inch(float a)
+	void enterFeet()
 	{
-		cout << a <<" feets = "<< (a*12) << " inches"<< endl;
+		cout<<"Enter feet:";
+		cin>>feet;
 	}
-	/*
-	// this method converts inches into feets
-	void feet(float b)
+
+	int getFeet()
 	{
-		cout << b <<" inches = "<< (b/12) << " feets"<< endl;
+		return feet;
 	}
-	*/
+
+	void ConvertIntoInches(int a)
+	{
+		cout<<"Feet("<<feet<<")="<<"  "<<"inches("<<a*12<<")";
+	}
 };
 
-int main()
+void main()
 {
-	convert a; //declaring object a
-	
-	cout << "Enter feet : ";
-	cin >> a.x; 
-	a.inch(a.x); // accessing inch method
-	/*
-	cout << "Enter Inches : ";
-	cin >> a.x;
-	a.feet(a.x); // accessing feet method
-	*/
-	return 0;	
+	int c;
+	clrscr();
+	A f;
+	f.enterFeet();
+	f.ConvertIntoInches(c=getFeet());
+	getch();
 }
+
+
+
