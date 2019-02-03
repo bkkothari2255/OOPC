@@ -1,0 +1,49 @@
+/* A program to find out largest number from given input. Use nesting of member function. */
+
+#include<iostream>
+
+using namespace std;
+class number  
+{
+	int x,y;
+  //declaring methods in public
+	public:
+	void fetch();
+	int large();
+	void print();
+};
+
+void number :: fetch() // Method to fetch two numbers
+{
+	cout << "Enter Two Numbers : ";
+	cin >> x >> y;	
+}
+
+int number :: large() // Method to find largest number out of two
+{
+//using turnery operator 
+	int c;
+	(x>y)? c=x : c=y;
+	return c;
+/*
+//Simple Logic 
+if(x>y)
+return x;
+else
+return y;
+*/
+}
+
+void number :: print() // Method to print the larger number 
+{
+	cout << "Large number = "<< large() << endl; // nesting large() into print() method
+}
+
+int main()
+{
+	number a; // declaring object a 
+	// accessing number class methods by object a
+	a.fetch();
+	a.print();
+	return 0;
+}
