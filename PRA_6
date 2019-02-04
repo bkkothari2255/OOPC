@@ -1,0 +1,58 @@
+/* A program to demonstrate use of manipulators & private member function */
+
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+class manip // defining class manip
+{
+	void printHead() // private member function
+	{
+	cout << setw(20) << setfill('-') << "BILL" << setw(20) << setfill('-')<<" "<<endl;
+	/*
+	setw()->set Width function with given width 
+	setfill->set fill function by given symbol
+	endl->to get new line and clean the buffer
+	*/
+	}
+	void printFoot() // private member function
+	{
+	cout << setw(20) << setfill('-') << "THANK YOU " << setw(20) << setfill('-')<<" "<< endl;
+	}
+	public:
+		void get(); // public member function
+};
+
+void manip :: get() //method to get name rate and quantity
+	{
+
+			char iName[10];
+			float i,r,g,gst,t;
+				cout<<"Enter Item Name: ";
+				cin>>iName;
+				cout<<"Enter Rate: ";
+				cin>>r;
+				cout<<"Enter Quantity: ";
+				cin>>i;
+				t=(i*r);
+				gst=t * 0.18;
+				g=gst+ t;
+			printHead();// nesting private member
+				cout<<endl<<setw(20)<<"Item Name: "<<setw(15)<<iName<<endl
+					<<setw(20)<<"Item Rate: "<<setw(15)<<r<<endl
+					<<setw(20)<<"Quantity: "<<setw(15)<<i<<endl
+					<<setw(20)<<"Total: "<<setw(15)<<t<<endl
+					<<setw(20)<<"GST[18%]: "<<setw(15)<<gst<<endl
+					<<setw(20)<<"Grand Total: "<<setw(15)<<g<<endl<< endl;
+			printFoot();// nesting private member
+		}
+
+int main()
+{
+
+	manip b1;//declaring b1 object of manip class type
+	b1.get(); 
+	
+	return 0;
+}
