@@ -1,0 +1,60 @@
+/* A program to compute volume of cube , cylinder & rectangular box 
+using fnction overloading */
+#include<iostream>
+
+using namespace std;
+//overloading vol function
+float vol(float a);//cube
+float vol(float r,float h);//cylinder
+float vol(float l,float b,float h);//rectangularbox
+
+int main()
+{	
+int c;
+cout <<"Choose [1 CUBE 2 CYLINDER 3 RECTANGULARBOX] :";
+cin >> c;
+switch(c)
+{
+	case 1://fetch length and volume fuction
+		float a;
+		cout << "CUBE\nEnter Length : ";
+		cin >> a;
+		cout << endl << "Volume of cube : " << vol(a);
+		break;
+	case 2://fetch radius and height and volume function
+		float r,h;
+		cout << "CYLINDER\nEnter Radius : ";
+		cin >> r;
+		cout << endl << "Enter Height : ";
+		cin >> h;
+		cout << endl << "Volume of Cylinder : "<< vol(r,h);
+		break;
+	case 3://fetch length ,breadth ,height and volume fuction
+		float l,b;
+		cout <<"RECTANGULAR BOX\nEnter Length : ";
+		cin >> l;
+		cout <<endl << "Enter Breadth : ";
+		cin >> b;
+		cout <<endl << "Enter Height : ";
+		cin >> h;
+		cout << endl << "Volume of Rectangular Box : "<< vol(l,b,h);
+		break;
+	default:
+	cout << "EXIT Wrong Choice!!";	
+}
+
+	return 0;
+}
+//defination of vol() function 
+float vol(float a)
+{
+	return (a*a*a);
+}
+float vol(float r,float h)
+{
+	return (3.14*r*r*h);
+}
+float vol(float l,float b,float h)
+{
+	return (l*b*h);
+}
