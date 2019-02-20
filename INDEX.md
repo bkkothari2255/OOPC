@@ -22,4 +22,4 @@ Note : These all experiments is performend in dev c++ IDE so some syntax may dif
   
   [PRA_6](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_2/PRA_6) Use of manipulators and private member function
   
-
+  [PRA_7](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_2/PRA_7) Print array in ascending order
