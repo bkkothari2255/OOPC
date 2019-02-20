@@ -1,0 +1,23 @@
+/* A program to use of default arguments */
+#include<iostream>
+
+using namespace std;
+
+float baseArea(float r,float p=3.14)// prototype with default argument 
+{
+	return ((p*r*r));//returning area
+} 
+float coneLSurArea(float r,float l=10,float p=3.14 )
+{
+	return (p*l*r);
+}
+int main()
+{
+	float a;
+	cout << "Enter radius of base: ";
+	cin >> a;
+	cout << "Area of Base: "<< baseArea(a)<< endl;
+	cout << "Lateral Surface area of Cone[if l=10] : "<< coneLSurArea(a) << endl;
+	cout << "Lateral Surface area of Cone[if l=15] : "<< coneLSurArea(a,15)<< endl;//overwrite default arguments with actual arguments
+	return 0;
+}
