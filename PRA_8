@@ -1,0 +1,35 @@
+/* A program to demonstrate inline function */
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+//defining arithmetic fuction as inline function
+inline float add(float a,float b) // addition
+{
+	return(a+b);
+}
+inline float sub(float x,float y) //subtraction
+{
+	return(x-y);
+}
+inline float mul(float p,float q) //multiplication
+{
+	return(p*q);
+}
+inline float div(float m,float n)//division
+{
+	return(m/n);
+}
+
+int main()
+{
+	float h=170.830,k=107.014; // two static values
+	
+	cout << "Arithmetic Operation on " << h <<" and "<< k << endl;
+	cout << setw(20)<< "Addition |" << setw(10)<< add(h,k)<< endl;
+	cout << setw(20)<< "Subtration |"<< setw(10)<< sub(h,k)<< endl;
+	cout << setw(20)<< "Multiplication |"<< setw(10)<< mul(h,k)<< endl;
+	cout << setw(20)<< "Division |"<< setw(10)<<div(h,k)<<endl;
+	
+	return 0;
+}
