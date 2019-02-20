@@ -1,0 +1,56 @@
+/* A program to read an array and print it in ascending order */
+#include<iostream>
+
+using namespace std;
+
+class array //defining class array 
+{
+	int n,ar[100]; // Limitation of array whould be 100 [ 0 <n<100]
+	void asce(int a[],int x)// defining method to form acesnding order in array
+	{
+		//bubble sort logic
+		for(int i=0;i<(x-1);i++)
+		{
+			for(int j=0;j<(x-i-1);j++)
+			{
+				if(a[j]>a[j+1])
+				{
+					int t;
+					t=a[j+1];
+					a[j+1]=a[j];
+					a[j]=t;
+				}
+			}
+		}
+	}
+	public:
+		int readArray()// method which is used to read array
+		{
+			cout<< "Enter Number of Elements : ";
+			cin >> n;
+			cout << endl << "Enter "<< n << " Elements to the array : "<<endl;
+			for(int i=0;i<n;i++)
+			{
+				cin >> ar[i];
+			}
+		}
+	
+		void writeArray() // method to write array
+		{
+			asce(ar,n); // callasce method 
+			cout<<"Array in Acsending Order : "<< endl;
+			for(int i=0;i<n;i++)
+			{
+				cout<< "|\t"<< ar[i]<<"\t|";
+			}	
+		}
+};
+
+int main()
+{
+	array a1; // declaring object a1
+	// methods using a1 object
+	a1.readArray();
+	a1.writeArray();	
+	return 0;
+}
