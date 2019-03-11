@@ -1,0 +1,44 @@
+/*A program to pass objects as function arguments */
+#include<iostream>
+using namespace std;
+class weight
+{
+	int kilogram;
+	int gram;
+	public:
+		void getdata ()	
+		{
+			cout<<endl<<"Kilograms: ";
+			cin>>kilogram;
+			cout<<"Grams: ";
+			cin>>gram;
+		}
+		void putdata ()
+		{
+			cout<<kilogram<<" Kgs. and "<<gram<<" grms."<<endl;
+		}
+		void sumWeight (weight w1,weight w2)	
+		{
+			gram = w1.gram + w2.gram;
+			kilogram=gram/1000;
+			gram=gram%1000;
+			kilogram+=w1.kilogram+w2.kilogram;
+		}
+};
+int main ()
+{
+	weight w1,w2 ,w3;
+	cout<<"Enter weight in kilograms and grams"<<endl;
+	cout<<endl<<"Enter weight 1" ;
+	w1.getdata();
+	cout<<endl<<"Enter weight 2" ;
+	w2.getdata();
+	w3.sumWeight(w1,w2);
+	cout<<endl<<"Weight 1 = ";
+	w1.putdata();
+	cout<<"Weight 2 = ";
+	w2.putdata();
+	cout<<endl<<"Total Weight = ";
+	w3.putdata();
+	return 0;
+}
