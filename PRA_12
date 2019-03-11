@@ -1,0 +1,69 @@
+/*A program to demonstrate use of static data member functions */
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+class sta
+{
+ char fname[10],lname[10];
+ char div;
+ static int getObjCount;
+ public:
+ 	 
+
+ 	void getData(int a)
+	 {
+	 	cout <<"USER : "<< a << endl;
+	
+ 		cout << "Enter Your First Name : ";
+ 		cin >> fname;
+ 		cout << "Enter Your Last Name : ";
+ 		cin >> lname;
+ 		cout<<"Enter your Division: ";
+		cin >> div;
+		
+	 }
+	 static int getCount()
+	 {
+	 	getObjCount++;
+	 	
+	 	return getObjCount;
+	 }
+ 	void putData()
+	 {
+	 	cout << "Enterd details : ";
+ 		cout<<setw(10)<<fname<<" "<<lname <<setw(5)<<div<<endl;
+		
+	 }
+	 
+	 void totalObj(int c)
+	 {
+	 	cout << endl<< "Total Entries : " <<c;
+	 }	
+};
+
+int sta :: getObjCount;
+
+int main()
+{
+	int c;
+	sta s1,s2,s3;
+	
+	c =s1.getCount();
+	s1.getData(c);
+	
+	c=s2.getCount();
+	s2.getData(c);
+	
+	c=s3.getCount();
+	s3.getData(c);
+	
+	s1.putData();
+	s2.putData();
+	s3.putData();
+	
+	s3.totalObj(c);
+
+	return 0;
+}
