@@ -1,0 +1,42 @@
+/* A program to use of static data members. */
+
+#include<iostream>
+
+using namespace std;
+
+class Sym
+{
+	static int c;
+	public:
+		int getSym()
+		{   char a;
+			cout << endl<<"Enter any Charcter:";
+			cin >> a;
+			c++;
+			return a;
+		}
+		void printSym(int a)
+		{   for(int i=0;i<c;i++)	
+			{
+				cout << a<<" ";
+			}
+			cout << endl;
+		}	
+};
+
+int Sym :: c; //definition of static data member
+
+int main()
+{
+	Sym a1,a2,a3;
+	int b1,b2,b3;
+	
+	b1=a1.getSym();
+	a1.printSym(b1);
+	b2=a2.getSym();
+	a2.printSym(b2);
+	b3=a3.getSym();	
+	a3.printSym(b3);
+	
+	return 0;
+}
