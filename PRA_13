@@ -1,0 +1,44 @@
+/* A program to demonstrate use of array of objects */
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class arobj // defining class array of object
+{
+ char fname[10],lname[10];
+ char div;
+ public: 	 
+ 	void getData(int a)
+	 {
+	 	cout <<"USER : "<< a << endl;
+ 		cout << "Enter Your First Name : ";
+ 		cin >> fname;
+ 		cout << "Enter Your Last Name : ";
+ 		cin >> lname;
+ 		cout<<"Enter your Division: ";
+		cin >> div;
+	 }
+ 	void putData(int b)
+	 {
+ 		cout<<b<<setw(15)<<fname<<" "<<lname <<setw(5)<<div<<endl;
+	 }	
+};
+int main()
+{
+	int c;
+	cout <<"Enter no. of Entries :";
+	cin >> c;
+	arobj s[c];
+	for(int i=0;i<c;i++)
+	{
+		s[i].getData(i);
+	}
+	
+	cout << "Enterd details : "<<endl;
+	cout<<setw(15)<<"fname"<<" lname "<<setw(5)<<"div"<<endl;
+	for(int i=0;i<c;i++)
+	{
+		s[i].putData(i);
+	}	
+	return 0;
+}
