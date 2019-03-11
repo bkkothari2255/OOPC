@@ -32,3 +32,68 @@ Note : These all experiments is performend in dev c++ IDE so some syntax may dif
   
   
  ## [EXPERIMENT_3](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_3)
+ 
+ [PRA_11](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_3/PRA_11) To use of static data members
+ 
+ [PRA_12](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_3/PRA_12) To demonstrate use of static data member functions
+ 
+ [PRA_13](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_3/PRA_13) To demonstrate use of array of objects
+ 
+ [PRA_14](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_3/PRA_14) To pass objects as function arguments
+ 
+ 
+ ## [EXPERIMENT_4](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_4)
+ 
+ [PRA_15]()
+ 
+ [PRA_16]()
+ 
+ [PRA_17]()
+ 
+ 
+ ## [EXPERIMENT_5](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_5)
+ 
+ [PRA_18]()
+ 
+ [PRA_19]()
+ 
+ [PRA_20]()
+ 
+ 
+ ## [EXPERIMENT_6](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_6)
+ 
+ [PRA_21]()
+ 
+ [PRA_22]()
+ 
+ [PRA_23]()
+ 
+ [PRA_24]()
+
+
+ ## [EXPERIMENT_7](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_7)
+
+[PRA_25]()
+
+[PRA_26]()
+
+
+ ## [EXPERIMENT_8](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_8)
+ 
+ [PRA_27]()
+
+ [PRA_28]()
+
+ 
+ ## [EXPERIMENT_9](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_9)
+ 
+ [PRA_29]()
+
+ [PRA_30]()
+
+
+ ## [EXPERIMENT_10](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_10)
+
+[PRA_31]()
+
+[PRA_32]()
