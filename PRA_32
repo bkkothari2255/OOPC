@@ -1,0 +1,78 @@
+/* A program to use of virtual functions. */
+#include<iostream>
+using namespace std;
+class Rectangle
+{
+	public:
+	void virtual draw()
+	{
+		int i, j, rows, columns;
+		/* Input rows and columns from user */
+		cout<<"Enter number of rows: ";
+		cin >> rows;
+		cout<<"Enter number of columns: ";
+		cin >> columns;
+
+	    /* Iterate through each row */
+	    for(int i=1; i<=rows; i++)
+	    {
+	        /* Iterate through each column */
+	        for(int j=1; j<=columns; j++)
+	        {
+	            /* For each column print star */
+	            cout<<"* ";
+	        }
+	        /* Move to the next line/row */
+	        cout << endl;
+	    }
+	}
+};
+class Hollow_rect : public Rectangle
+{
+	public:
+	void draw()
+	{
+		int columns, rows, a, b;
+   
+		cout<<"Enter number of rows : ";
+		cin>>rows;
+		cout<<"Enter number of columns : ";
+		cin>> columns;
+		/*this loop increase number of rows */
+		for(a = 0; a < rows; a++)  
+		{
+			/*this loop increase number of columns */
+    	    for(b = 0; b < columns; b++) 
+			{
+            	/* this puts the star on boudaries */
+				if(a==0 || a==rows-1 || b==0 || b==columns-1)             
+					cout << "* "; //prints the star
+            	else 
+					cout <<"  "; 
+				/* leaves the middle columns of rectangle blank*/
+        	}
+        	cout<< endl;
+	    }
+	}
+};
+int main()
+{
+	Rectangle *r;//pointer of base class
+	Hollow_rect h;//object of derived class
+	r=&h;
+	r->draw();//Late Binding occurs
+	return 0;
+}
+/*
+Enter number of rows : 5
+Enter number of columns : 10
+* * * * * * * * * *
+*                 *
+*                 *
+*                 *
+* * * * * * * * * *
+
+--------------------------------
+Process exited after 9.413 seconds with return value 0
+Press any key to continue . . .
+*/
