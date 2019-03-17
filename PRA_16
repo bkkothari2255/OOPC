@@ -1,0 +1,138 @@
+/* A program to use friend function to swap data of two classes using call by reference. */
+
+#include<iostream>
+
+using namespace std;
+
+class ar_2;//forward declaration
+
+class ar_1
+{
+	int a[100],n;
+	public:
+		
+		void getElemnt()
+		{
+			cout <<"ARRAY 1"<< endl << "Enter number of Elements : ";
+			cin >> n;
+			cout << endl << "Enter "<<n<<" Elements :"<< endl;
+			for(int i=0;i<n;i++)
+			{
+				cin >> a[i];
+			}
+			cout << endl ;
+		}
+	void putElemnt()
+	{
+		cout <<endl<<"ARRAY 1"<<endl << "Present Elements :";
+		for(int i=0;i<n;i++)
+		{
+			cout << a[i] << "\t";
+		}
+		cout << endl;
+		
+	}	
+		friend void tranElemnt(ar_1 &,ar_2 &);
+};
+
+class ar_2
+{
+	int a[100],n;
+	public:	
+	void getElemnt()
+	{
+		cout <<"ARRAY 2"<< endl << "Enter number of Elements : ";
+		cin >> n;
+		cout << endl << "Enter "<<n<<" Elements :"<< endl;
+		for(int i=0;i<n;i++)
+		{
+			cin >> a[i];
+		}
+		cout << endl ;
+	}
+	void putElemnt()
+	{
+		cout <<endl<<"ARRAY 2"<<endl << "Present Elements :";
+		for(int i=0;i<n;i++)
+		{
+			cout << a[i] << "\t";
+		}
+		cout << endl;
+		
+	}
+	friend void tranElemnt(ar_1 &,ar_2 &);	
+	
+	
+};
+
+void tranElemnt(ar_1 &a1,ar_2 &a2)//definition of friend
+{
+	int t[100],T;
+	for(int i=0;i<(a2.n);i++)
+	{
+		t[i]=a2.a[i];
+	}
+	for(int i=0;i<(a1.n);i++)
+	{
+		a2.a[i]=a1.a[i];
+	}
+	for(int i=0;i<(a2.n);i++)
+	{
+		a1.a[i]=t[i];
+	}
+	T=(a2.n);
+	(a2.n)=(a1.n);
+	(a1.n)=T;
+	cout << endl << "DATA HAS BEEN SWAPED ..."<< endl;
+}
+
+int main()
+{
+	ar_1 p;
+	ar_2 q;
+	//To fetch elements to array 
+	p.getElemnt();
+	q.getElemnt();
+	//To display elements of array
+	p.putElemnt();
+	q.putElemnt();
+	
+	tranElemnt(p,q);//swaping of elements
+
+	p.putElemnt();
+	q.putElemnt();
+	
+	return 0;
+}
+/*
+ARRAY 1
+Enter number of Elements : 4
+
+Enter 4 Elements :
+1 4 7 8
+
+ARRAY 2
+Enter number of Elements : 6
+
+Enter 6 Elements :
+2 5 6 9 3 0
+
+
+ARRAY 1
+Present Elements :1     4       7       8
+
+ARRAY 2
+Present Elements :2     5       6       9       3       0
+
+DATA HAS BEEN SWAPED ...
+
+ARRAY 1
+Present Elements :2     5       6       9       3       0
+
+ARRAY 2
+Present Elements :1     4       7       8
+
+--------------------------------
+Process exited after 30.84 seconds with return value 0
+Press any key to continue . . .
+/*
