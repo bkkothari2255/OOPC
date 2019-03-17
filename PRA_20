@@ -1,0 +1,59 @@
+/* A program to implement the destructors. */
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+
+class Person 
+{
+	char fname[10],lname[10];
+	int pid,age;
+	
+	public:
+		
+		Person()// defining constructor
+		{
+			cout << "ENTER PERSON DETAILS"<<endl;
+			cout << "Enter Person Name : ";
+			cin >> fname >> lname;
+			cout << "Enter PID : ";
+			cin >> pid;
+			cout << "Enter Age : ";
+			cin >> age;			
+		}
+		~Person()// defining destructor
+		{
+			cout << pid << setw(20) <<setfill(' ')<<fname<<" "<<lname <<setw(6)<<age <<endl;
+		}
+};
+
+int main()
+{
+	Person p1;
+	Person p2;
+	Person p3;
+	cout <<"PID "<<setw(20)<<" Name "<<setw(6)<<" AGE "<<endl;
+	return 0;
+}
+/*
+ENTER PERSON DETAILS
+Enter Person Name : Bhavik Kothari
+Enter PID : 2
+Enter Age : 12
+ENTER PERSON DETAILS
+Enter Person Name : Bhavik Kothari
+Enter PID : 1
+Enter Age : 15
+ENTER PERSON DETAILS
+Enter Person Name : Bhavik Kothari
+Enter PID : 4
+Enter Age : 19
+PID                Name   AGE
+4              Bhavik Kothari    19
+1              Bhavik Kothari    15
+2              Bhavik Kothari    12
+
+--------------------------------
+Process exited after 32.1 seconds with return value 0
+Press any key to continue . . .
+*/
