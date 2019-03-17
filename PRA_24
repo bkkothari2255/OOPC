@@ -1,0 +1,65 @@
+/* A program to demonstrate single inheritance by private derivation. */
+#include<iostream>
+using namespace std;
+class Distance 
+{
+	float d;
+	public:
+		int getDistance()
+		{
+			cout << "Enter total Distance in meter :";
+			cin >> d;
+			cout << endl;
+			return d;
+		}
+		void putDistance()
+		{
+			cout << "Distance = " <<d<<endl;
+		}
+};
+class speed : private Distance
+{
+	float t,s;
+	public:
+		void getTime()
+		{
+			
+			cout << "Enter total Time in Seconds : ";
+			cin >>t;
+			s=t*getDistance();
+		}
+		void putSpeed()
+		{
+			cout << "Speed of Vehicle = "<<s<<" m/s"<<endl;
+		}		
+};
+int main()
+{
+	cout <<"For Car"<<endl;
+	speed car;
+	car.getTime();
+	car.putSpeed();
+	cout << endl<< "For Truck"<<endl;
+	speed truck;
+	truck.getTime();
+	truck.putSpeed();
+	return 0;
+}
+/*
+Output:
+For Car
+Enter total Time in Seconds : 500
+Enter total Distance in meter :40
+
+Speed of Vehicle = 20000 m/s
+
+For Truck
+Enter total Time in Seconds : 666
+Enter total Distance in meter :33
+
+Speed of Vehicle = 21978 m/s
+
+--------------------------------
+Process exited after 25.92 seconds with return value 0
+Press any key to continue . . .
+*/
