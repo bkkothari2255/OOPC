@@ -44,56 +44,56 @@ Note : These all experiments is performend in dev c++ IDE so some syntax may dif
  
  ## [EXPERIMENT_4](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_4)
  
- [PRA_15](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_15)
+ [PRA_15](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_15) To demonstrate use of friend function
  
- [PRA_16](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_16)
+ [PRA_16](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_16) To use friend function with call by reference
  
- [PRA_17](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_17)
+ [PRA_17](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_4/PRA_17) A function with call by reference
  
  
  ## [EXPERIMENT_5](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_5)
  
- [PRA_18](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_18)
+ [PRA_18](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_18) To demonstrate use of constructors
  
- [PRA_19](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_19)
+ [PRA_19](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_19) To demonstrate use of copy constructors
  
- [PRA_20](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_20)
+ [PRA_20](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_20) To implement the destructor
  
  
  ## [EXPERIMENT_6](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_6)
  
- [PRA_21](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_21)
+ [PRA_21](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_21) To overload binary operators using friend function
  
- [PRA_22](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_22)
+ [PRA_22](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_22) To overload binary operators using friend function
  
- [PRA_23](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_23)
+ [PRA_23](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_23) To use single inheritance by public derivation
  
- [PRA_24](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_24)
+ [PRA_24](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_6/PRA_24) To use single inheritance by private derivation
 
 
  ## [EXPERIMENT_7](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_7)
 
-[PRA_25](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_25)
+[PRA_25](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_25) To demonstrate multilevel inheritance
 
-[PRA_26](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_26)
+[PRA_26](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_26) To demonstrate multiple inheritance
 
 
  ## [EXPERIMENT_8](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_8)
  
- [PRA_27](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_27)
+ [PRA_27](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_27) To demonstrate hierarchical inheritance
 
- [PRA_28](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_28)
+ [PRA_28](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_28) To demonstrate hybrid inheritance
 
  
  ## [EXPERIMENT_9](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_9)
  
- [PRA_29](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_29)
+ [PRA_29](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_29) To implement concept of virtual base class
 
- [PRA_30](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_30)
+ [PRA_30](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_30) To use of pointer to objects
 
 
  ## [EXPERIMENT_10](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_10)
 
-[PRA_31](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_31)
+[PRA_31](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_31) 	To use of this pointer
 
-[PRA_32](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_32)
+[PRA_32](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_32) To use of virtual functions
