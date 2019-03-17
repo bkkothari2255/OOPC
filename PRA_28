@@ -1,0 +1,123 @@
+/* A program to demonstrate hybrid inheritance */
+#include<iostream>
+using namespace std;
+class Company
+{
+	public:
+		Company()
+		{
+			cout << " COMPUTER PVT. LTD. ";
+		}
+};
+class Product:public Company
+{
+	protected:
+		int n,q,p;
+	public:
+		Product()
+		{
+			pro();
+			choice();
+		}
+		void pro()
+		{
+			cout<<endl<<"1. Laptop	: 45000";
+			cout<<endl<<"2. Tablet	: 20000";
+			cout<<endl<<"3. Mobile	: 10000";
+			cout<<endl<<"4. Headspree	: 200";
+			cout<<endl<<"5. Mouse	: 150";
+			cout<<endl<<"6. Keyboard	: 250";
+			cout<<endl<<"7. Processor	: 22000";
+			cout<<endl;
+		}
+		float choice()
+		{
+			cout << endl<< "PURCHASE ANY ONE PRODUCT "<<endl;
+			cout << "Enter Your Choice : ";
+			cin >> n;
+			cout << "Enter Quantity : ";
+			cin >> q;
+			cout<< endl;
+			switch(n)
+			{
+				case 1:
+					cout <<endl<<q<< " LAPTOP OF PRISE ";
+					p=45000;
+					break;
+					
+				case 2:
+					cout <<endl<<q<< " TABLET OF PRISE ";
+					p=20000;
+					break;
+				//	cout <<endl<<
+				case 3:
+					cout <<endl<<q<< " MOBILE OF PRISE ";
+					p=10000;
+					break;
+				case 4:
+					cout <<endl<<q<< " HEADSPREE OF PRISE ";
+					p=200;
+					break;
+				case 5:
+					cout <<endl<<q<< " MOUSE OF PRISE ";
+					p=150;
+					break;	
+				case 6:
+					cout <<endl<<q<< " KEYBOARD OF PRISE ";
+					p=250;
+					break;
+				case 7:
+					cout <<endl<<q<< " PROCESSOR OF PRISE ";
+					p=22000;
+					break;
+				default:
+					cout <<" Enter Valid Choice ";
+			}
+		}
+};
+class Payment 
+{
+	public:
+		Payment(int &r,int &i)
+		{
+			cout << r<<" HAS BEEN PURCHASED."<<endl;
+			cout<<"Pay "<< r*i <<" INR";
+		}
+};
+class Coustomer:public Product,public Payment
+{
+	public: 
+	Coustomer():Payment(p,q),Product()//constructor in multiple iinheritance 
+	{
+		cout << endl<<endl<<"THANK YOU ...";
+	}
+};
+int main()
+{
+	Coustomer c;
+	return 0;
+}
+/*
+Output:
+ COMPUTER PVT. LTD.
+1. Laptop       : 45000
+2. Tablet       : 20000
+3. Mobile       : 10000
+4. Headspree    : 200
+5. Mouse        : 150
+6. Keyboard     : 250
+7. Processor    : 22000
+
+PURCHASE ANY ONE PRODUCT
+Enter Your Choice : 5
+Enter Quantity : 3
+
+
+3 MOUSE OF PRISE 150 HAS BEEN PURCHASED.
+Pay 450 INR
+
+THANK YOU ...
+--------------------------------
+Process exited after 11.53 seconds with return value 0
+Press any key to continue . . .
+*/
