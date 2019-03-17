@@ -1,0 +1,44 @@
+/* A program to demonstrate use of friend function */
+
+#include<iostream>
+
+using namespace std;
+
+class Area //defining class
+{
+	int r;// data member 
+	public:
+		friend float cirArea(Area);// friend function declaration
+		void getRadius() //method to fetch radius
+		{
+			cout << "Enter Radius : ";
+			cin >> r;
+		}
+		void putArea(float a)//method to display area
+		{
+			cout << "Circle area = "<< a;
+		}
+};
+float cirArea(Area a) // defining friend function to calculate area
+{
+	return (3.14)*(a.r)*(a.r);	 	
+}
+int main()
+{
+	Area c;
+	float A;
+
+	c.getRadius();
+	A=cirArea(c);
+	c.putArea(A);
+	
+	return 0;
+}
+/*
+Output :
+Enter Radius : 8
+Circle area = 200.96
+--------------------------------
+Process exited after 5.263 seconds with return value 0
+Press any key to continue . . .
+/*
