@@ -1,0 +1,53 @@
+/* A program to overload binary operators using friend function */
+#include<iostream>
+using namespace std;
+class Inr 
+{
+	float rs;
+	public:
+	void avail()
+	{
+		cout << "Enter available money :";
+		cin >> rs;
+	}
+	void price()
+	{
+		cout << "Enter Item Price : ";
+		cin >> rs;
+	}
+	void remain()
+	{
+		cout <<endl<< "You have only " << rs<<" INR"<<endl;
+	}
+	friend Inr operator-(Inr &,Inr &);//declaring friend function 
+};
+Inr operator-(Inr &a,Inr &b) // defining friend function to overload binary operator
+{
+	Inr c;
+	c.rs = a.rs - b.rs; // calculating remaining money 
+	return c;
+}
+int main()
+{
+	Inr avai,i_1,rema;
+	cout << "\tREMAINING MONEY"<<endl<<endl;
+	avai.avail();
+	i_1.price();
+	rema=avai-i_1;// overloading binary operator 
+	
+	rema.remain();
+	return 0;
+}
+/*
+Output:
+        REMAINING MONEY
+
+Enter available money :5555
+Enter Item Price : 1224
+
+You have only 4331 INR
+
+--------------------------------
+Process exited after 10.24 seconds with return value 0
+Press any key to continue . . .
+*/
