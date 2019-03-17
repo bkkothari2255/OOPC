@@ -1,0 +1,69 @@
+/* A program to demonstrate multilevel inheritance */
+#include<iostream>
+using namespace std;
+class Circle
+{
+	public:
+		float r;
+		Circle()
+		{
+			cout << "Enter Radius :";
+			cin >> r;
+		}
+};
+class Cylinder: public Circle
+{
+	public:
+	float h;
+		Cylinder()
+		{
+			cout << "Enter Height :";
+			cin >> h;			
+		}
+};
+class Cone:public Cylinder
+{
+	public:
+	float l;	
+		Cone()
+		{
+			cout << "Enter Slant Height :";
+			cin >> l;
+		}
+};
+class Area: public Cone
+{	
+	double cir_a;
+	double cyl_a;
+	double con_a;
+	public:
+	Area()
+	{
+		cir_a=3.14*r*r;
+		cyl_a=2*(cir_a+(3.14*r*h));
+		con_a=cir_a+(3.14*r*l);
+		cout <<endl;	
+		cout <<"Area of Circle : "<< cir_a<<endl;
+		cout <<"Area of Cylinder : "<< cyl_a<<endl;
+		cout <<"Area of Cone : "<< con_a<<endl;
+	}
+};
+int main()
+{
+	Area obj1;	
+	return 0;
+}
+/*
+Output:
+Enter Radius :5
+Enter Height :7
+Enter Slant Height :8
+
+Area of Circle : 78.5
+Area of Cylinder : 376.8
+Area of Cone : 204.1
+
+--------------------------------
+Process exited after 11.05 seconds with return value 0
+Press any key to continue . . .
+*/
