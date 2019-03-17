@@ -1,0 +1,69 @@
+/*A program to use of pointer to objects. */
+#include<iostream>
+#include<iomanip>
+int n;
+using namespace std;
+
+class User
+{
+	static int count; 
+	int uid,age;
+	char fname[10],lname[10];
+	
+	public :
+		void getDetails()
+		{	
+			cout << "Enter Name : ";
+			cin >> fname >> lname;
+			cout << "Enter UID : ";
+			cin >> uid;
+			cout << "Enter Age : ";
+			cin >> age;
+		}
+		void display(int a)
+		{
+			cout <<endl<<a<<"  "<<fname<<" "<<lname<<setw(5)<<uid<<setw(5)<<age;
+		}	
+};
+int main()
+{
+	cout << "Enter Number of User : ";
+	cin >> n;
+	User *a=new User[n];
+	User *b=a;	
+	for(int i=0;i<n;i++)
+	{
+		cout <<endl <<"Enter details of USER "<<i+1<<endl;
+		a->getDetails();
+		a++;
+	}
+	cout <<endl<<"No."<<setw(3)<<" Name "<<setw(10)<<"uid"<<setw(10)<<"age"<<endl;
+	for(int i=0;i<n;i++)
+	{
+		b->display(i);
+		b++;
+	}
+	return 0;
+}
+/*
+Output:
+Enter Number of User : 2
+
+Enter details of USER 1
+Enter Name : Bhavik Kothari
+Enter UID : 2
+Enter Age : 12
+
+Enter details of USER 2
+Enter Name : Bhavik Kothari
+Enter UID : 1
+Enter Age : 16
+
+No. Name        uid       age
+
+0  Bhavik Kothari    2   12
+1  Bhavik Kothari    1   16
+--------------------------------
+Process exited after 24.62 seconds with return value 0
+Press any key to continue . . .
+/*
