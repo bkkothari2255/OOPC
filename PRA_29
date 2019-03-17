@@ -1,0 +1,124 @@
+/*A program to implement concept of virtual base class. */
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+class Calc
+{
+	protected:
+	float a,b;
+	public:
+		Calc()
+		{
+			system("CLS");
+			cout << "CALCULATOR\n"<<endl;	
+		}
+};
+class Operand_1:virtual public Calc
+{
+	//protected:
+	public:
+	void fetchOpn1()
+	{
+		cout << "Enter Operand 1 : ";
+		cin >> a;	
+	}	
+};
+class Operand_2:virtual public Calc
+{
+	//protected:
+	public:
+	void fetchOpn2()
+	{
+		cout << "Enter Operand 2 : ";
+		cin >> b;
+	}	
+};
+class Operation :virtual public Calc
+{
+	protected:
+	void choice(int &c)
+	{
+		switch(c)
+		{
+			case 1:
+				sum(a,b);
+				break;
+			case 2:
+				sub(a,b);
+				break;
+			case 3:
+				mul(a,b);
+				break;
+			case 4:
+				div(a,b);
+				break;
+			case 5:
+				cout << "\nPRESS ENTER...\n";
+				exit(0);
+				break;
+			default:
+				cout << "\nEnter Valid Input ...\n";
+		}
+	}
+	void sum(float &x,float &y)
+	{
+		cout<<x <<" + "<<y <<" = "<<(x+y);
+	}
+	void sub(float &x ,float &y )
+	{
+		cout<<x <<" - "<<y <<" = "<<(x-y);
+	}
+	void mul(float &x ,float &y)
+	{
+		cout<<x <<" * "<<y <<" = "<<(x*y);
+	}
+	void div(float &x,float &y)
+	{
+		cout<<x <<" / "<<y <<" = "<<(x/y);
+	}
+};
+class Ans : public Operand_1 , public Operand_2,public Operation
+{
+	public:
+		Ans()
+		{
+			fetchOpn1();
+			fetchOpn2();
+			arithChoice();
+		
+			cout << endl <<endl ;
+			system("PAUSE");
+			cout <<flush;
+		}
+	void arithChoice()
+	{
+		int n;
+			cout << endl<<"1. Sumation  \n2. Subtration\n3. Multiplication\n4. Division\n5. Exit"<<endl;
+			cout << endl << "Enter Your Choice : "	;
+			cin >> n;
+			choice(n);
+	}
+};
+int main()
+{
+	do
+	{
+		Ans a;
+	}while(1);
+	return 0;
+}
+/*
+CALCULATOR
+
+Enter Operand 1 : 55.66
+Enter Operand 2 : 55
+1. Sumation
+2. Subtration
+3. Multiplication
+4. Division
+5. Exit
+Enter Your Choice : 1
+55.66 + 55 = 110.66
+
+Press any key to continue . . .
+*/
