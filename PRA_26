@@ -1,0 +1,57 @@
+/* A program to demonstrate multiple inheritance */
+#include<iostream>
+using namespace std;
+class Base 
+{
+	protected :
+		int b;
+		void getBase()
+		{
+			cout << "Enter Base : ";
+			cin >> b;
+		}	
+};
+class Exponent
+{
+	protected :
+		int n;
+		void getExponent()
+		{
+			cout << "Enter Exponent : ";
+			cin >> n;
+		}
+ };
+class Power : public Base , public Exponent 
+{
+ 	public:
+ 		float p;
+ 		Power()
+ 		{
+ 			getBase();
+ 			getExponent();
+ 			solPower();
+			cout <<b<< " raise to "<<n <<" = "<< p;
+		 }
+		void solPower()
+		{
+			p=1;
+			for(int i=0;i<n;i++)
+			{
+				p*=b;		
+			}		
+		}
+};
+int main()
+{
+	Power P;	
+	return 0;
+}
+/*
+Output:
+Enter Base : 5
+Enter Exponent : 5
+5 raise to 5 = 3125
+--------------------------------
+Process exited after 16.73 seconds with return value 0
+Press any key to continue . . .
+*/
