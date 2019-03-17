@@ -1,0 +1,62 @@
+/* A program to demonstrate single inheritance by public derivation. */
+#include<iostream>
+using namespace std;
+class Position 
+{
+	float d1,d2,t1,t2;
+	public:
+		void getPosition()
+		{
+			cout << "Enter Initial and Final Possition in meter : ";
+			cin >> d1>>d2;
+			cout << endl;
+		}
+		void getTime()
+		{
+			cout << "Enter Intial Time and Final Time in Seconds : ";
+			cin >>t1>>t2;	
+		}
+		int calDisplacement()
+		{
+			return (d2-d1);
+		}
+		int calPeriod()
+		{
+			return (t2-t1);
+		}	
+};
+class Velocity : public Position
+{
+	float t1,t2,avg_v;
+	public:
+		void putAvgVelocity(float d,float t)
+		{
+			avg_v= d/t;
+			cout << endl<<"Velocity of Vehicle = "<<avg_v<<" "<<"m/s"<<endl;
+		}
+};
+
+int main()
+{
+	cout <<"For Car"<<endl;
+	Velocity car;
+	float c_d,c_t;
+	car.getPosition();
+	car.getTime();
+	c_d=car.calDisplacement();
+	c_t=car.calPeriod();
+	car.putAvgVelocity(c_d,c_t);	
+	return 0;
+}
+/*
+For Car
+Enter Initial and Final Possition in meter : 4 600
+
+Enter Intial Time and Final Time in Seconds : 0 360
+
+Velocity of Vehicle = 1.65556 m/s
+
+--------------------------------
+Process exited after 23.38 seconds with return value 0
+Press any key to continue . . .
+*/
