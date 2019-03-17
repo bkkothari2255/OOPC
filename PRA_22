@@ -1,0 +1,69 @@
+/*A program to overload binary operator + using member function */
+#include<iostream>
+using namespace std;
+
+class Food
+{
+	static int count;
+	char i_name[10];
+	int n;
+	int quantity;
+	double total,prise,cal;
+	public:
+		void getOrder()
+		{
+			count++;
+			cout <<endl<< "FOOD ITEM "<< count <<endl;
+			cout << "Enter Prise : ";
+			cin >> prise;
+			cout <<"Enter Calories : ";
+			cin >> cal;
+			cout << "Enter Quantity : ";
+			cin >> n;
+			prise = prise * n;
+		}
+		void payBill(Food &t)
+		{
+			cout << endl << "Total " << total << " INR for " << count << " items "<< endl;
+			cout << "Total Calories you taken : " << cal;
+		}
+		Food operator+(Food b)
+		{
+			Food c;
+			c.total=prise+b.prise;
+			c.cal=cal+b.cal;
+			c.quantity=n+b.n;
+			return c;
+		}
+};
+int Food :: count;
+
+int main()
+{
+	Food bill,i1,i2;
+	cout << "Welcome ... place your order please .."<< endl;
+	i1.getOrder();
+	i2.getOrder();
+	bill=i1+i2;
+	bill.payBill(bill);
+	return 0;
+}
+/*
+Welcome ... place your order please ..
+
+FOOD ITEM 1
+Enter Prise : 55
+Enter Calories : 222
+Enter Quantity : 3
+
+FOOD ITEM 2
+Enter Prise : 55
+Enter Calories : 123
+Enter Quantity : 5
+
+Total 440 INR for 2 items
+Total Calories you taken : 345
+--------------------------------
+Process exited after 21.4 seconds with return value 0
+Press any key to continue . . .
+*/
