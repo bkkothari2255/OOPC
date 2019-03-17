@@ -1,0 +1,190 @@
+/* A program to demonstrate hierarchical inheritance. */
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+class Shape
+{
+	protected:
+	int size;
+	public:
+	Shape()
+	{
+				        cout<<" SSSSS  HH   HH   AAA   PPPPPP  EEEEEEE  SSSSS"<<endl;  
+                cout<<"SS      HH   HH  AAAAA  PP   PP EE      SS"<<endl;
+                cout<<" SSSSS  HHHHHHH AA   AA PPPPPP  EEEEE    SSSSS"<<endl;
+                cout<<"     SS HH   HH AAAAAAA PP      EE           SS"<<endl;
+                cout<<" SSSSS  HH   HH AA   AA PP      EEEEEEE  SSSSS"<<endl;
+                
+                cout <<endl<<"ENTER SIZE : ";
+                cin >> size;
+	}
+};
+
+class Square : public Shape
+{
+	public:
+		Square()
+		{ 
+			cout <<endl<< "PRINTING SQUARE "<<endl<<endl;
+    		for (int row = 1; row <= size; ++row) 
+    		{
+    		    for (int col = 1; col <= size; ++col) 
+        		{
+        		    cout << "# ";
+       			 }
+       			 cout << endl;
+    		}
+    		cout << endl;
+		}
+};
+
+class Triangle : public Shape
+{
+	public:
+		Triangle()
+		{
+			cout <<endl<< "PRINTING TRIANGLE "<<endl<<endl;
+			for(int i = 1; i <= size; i++)
+			{
+				//for loop for displaying space
+				for(int space = i; space < size; space++)
+				{
+					cout << "  ";
+				}
+				//for loop to display star equal to row number
+				for(int j = 1; j <= (2 * i - 1); j++)
+				{
+					cout << "# ";
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+};
+
+class Heart : public Shape
+{
+	public:
+		Heart()
+		{
+			int i,j,n;
+			n=size;
+			cout <<endl<< "PRINTING HEART "<<endl<<endl;
+			for(i=n/2; i<=n; i+=2)
+			{
+        		for(j=1; j<n-i; j+=2)
+        		{
+            		cout<<"  ";
+        		}
+        		for(j=1; j<=i; j++)
+        		{
+					    cout<<"# ";
+            }
+    				for(j=1; j<=n-i; j++)
+        		{
+            		cout<<"  ";
+        		}
+		        for(j=1; j<=i; j++)
+        		{
+            		cout<<"# ";
+        		}
+        		cout <<endl;
+			}
+		    for(i=n; i>=1; i--)
+    		{
+        		for(j=i; j<n; j++)
+        		{
+            		cout<<"  ";
+        		}
+		        for(j=1; j<=(i*2)-1; j++)
+        		{
+		            cout<<"# ";
+        		}
+		        cout<<endl;
+			}
+			cout << endl;
+		}
+};
+void b()
+{
+	system("PAUSE");
+	system("CLS");
+	cout << flush;
+}
+int main()
+{
+	Square s;
+	b();
+	Triangle t;
+	b();
+	Heart h;
+	return 0;
+}
+/*
+ SSSSS  HH   HH   AAA   PPPPPP  EEEEEEE  SSSSS
+SS      HH   HH  AAAAA  PP   PP EE      SS
+ SSSSS  HHHHHHH AA   AA PPPPPP  EEEEE    SSSSS
+     SS HH   HH AAAAAAA PP      EE           SS
+ SSSSS  HH   HH AA   AA PP      EEEEEEE  SSSSS
+
+ENTER SIZE : 6
+
+PRINTING SQUARE
+
+# # # # # #
+# # # # # #
+# # # # # #
+# # # # # #
+# # # # # #
+# # # # # #
+
+Press any key to continue . . .
+
+ SSSSS  HH   HH   AAA   PPPPPP  EEEEEEE  SSSSS
+SS      HH   HH  AAAAA  PP   PP EE      SS
+ SSSSS  HHHHHHH AA   AA PPPPPP  EEEEE    SSSSS
+     SS HH   HH AAAAAAA PP      EE           SS
+ SSSSS  HH   HH AA   AA PP      EEEEEEE  SSSSS
+
+ENTER SIZE : 8
+
+PRINTING TRIANGLE
+
+              #
+            # # #
+          # # # # #
+        # # # # # # #
+      # # # # # # # # #
+    # # # # # # # # # # #
+  # # # # # # # # # # # # #
+# # # # # # # # # # # # # # #
+
+Press any key to continue . . .
+
+ SSSSS  HH   HH   AAA   PPPPPP  EEEEEEE  SSSSS
+SS      HH   HH  AAAAA  PP   PP EE      SS
+ SSSSS  HHHHHHH AA   AA PPPPPP  EEEEE    SSSSS
+     SS HH   HH AAAAAAA PP      EE           SS
+ SSSSS  HH   HH AA   AA PP      EEEEEEE  SSSSS
+
+ENTER SIZE : 8
+
+PRINTING HEART
+
+    # # # #         # # # #
+  # # # # # #     # # # # # #
+# # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # #
+  # # # # # # # # # # # # #
+    # # # # # # # # # # #
+      # # # # # # # # #
+        # # # # # # #
+          # # # # #
+            # # #
+              #
+
+
+--------------------------------
+Process exited after 73.87 seconds with return value 0
+Press any key to continue . . .
+*/
