@@ -4,6 +4,11 @@ using namespace std;
 inline int large(int n1,int n2,int n3) 
 {
 	return n3 < fmax(n1,n2)? fmax(n1,n2) : n3;
+	/*
+	  if(a>b && a>c )		cout<<a<<" is greatest";
+	  else if(b>a && b>c )		cout<<b;
+	  else  cout<<c;
+	*/
 }
 int main()
 { 
