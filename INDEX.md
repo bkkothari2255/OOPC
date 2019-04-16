@@ -73,27 +73,27 @@ Note : These all experiments is performend in dev c++ IDE so some syntax may dif
 
  ## [EXPERIMENT_7](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_7)
 
-[PRA_25](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_25) To demonstrate multilevel inheritance
+[PRA_25](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_7/PRA_25) To demonstrate multilevel inheritance
 
-[PRA_26](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_26) To demonstrate multiple inheritance
+[PRA_26](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_7/PRA_26) To demonstrate multiple inheritance
 
 
  ## [EXPERIMENT_8](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_8)
  
- [PRA_27](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_27) To demonstrate hierarchical inheritance
+ [PRA_27](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_8/PRA_27) To demonstrate hierarchical inheritance
 
- [PRA_28](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_28) To demonstrate hybrid inheritance
+ [PRA_28](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_8/PRA_28) To demonstrate hybrid inheritance
 
  
  ## [EXPERIMENT_9](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_9)
  
- [PRA_29](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_29) To implement concept of virtual base class
+ [PRA_29](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_9/PRA_29) To implement concept of virtual base class
 
- [PRA_30](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_30) To use of pointer to objects
+ [PRA_30](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_9/PRA_30) To use of pointer to objects
 
 
  ## [EXPERIMENT_10](https://github.com/bkkothari2255/OOPC/tree/EXPERIMENT_10)
 
-[PRA_31](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_31) 	To use of this pointer
+[PRA_31](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_10/PRA_31) 	To use of this pointer
 
-[PRA_32](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_5/PRA_32) To use of virtual functions
+[PRA_32](https://github.com/bkkothari2255/OOPC/blob/EXPERIMENT_10/PRA_32) To use of virtual functions
